@@ -1,0 +1,166 @@
+
+@import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 15% 95%;
+    --foreground: 210 10% 20%;
+    --card: 210 15% 99%;
+    --card-foreground: 210 10% 20%;
+    --popover: 210 15% 99%;
+    --popover-foreground: 210 10% 20%;
+    --primary: 210 50% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 90%;
+    --secondary-foreground: 210 10% 20%;
+    --muted: 210 15% 90%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 180 50% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 210 50% 50%;
+    --radius: 0.5rem;
+    --chart-1: 210 50% 50%;
+    --chart-2: 180 50% 40%;
+    --chart-3: 210 30% 60%;
+    --chart-4: 180 30% 50%;
+    --chart-5: 210 40% 55%;
+    --sidebar-background: 210 15% 99%;
+    --sidebar-foreground: 210 10% 20%;
+    --sidebar-primary: 210 50% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 15% 90%;
+    --sidebar-accent-foreground: 210 10% 20%;
+    --sidebar-border: 210 15% 88%;
+    --sidebar-ring: 210 50% 50%;
+  }
+  .dark {
+    --background: 210 15% 10%;
+    --foreground: 210 15% 95%;
+    --card: 210 15% 15%;
+    --card-foreground: 210 15% 95%;
+    --popover: 210 15% 10%;
+    --popover-foreground: 210 15% 95%;
+    --primary: 210 50% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 20%;
+    --secondary-foreground: 210 15% 95%;
+    --muted: 210 15% 20%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 180 50% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
+    --ring: 210 50% 50%;
+    --chart-1: 210 50% 50%;
+    --chart-2: 180 50% 40%;
+    --chart-3: 210 30% 60%;
+    --chart-4: 180 30% 50%;
+    --chart-5: 210 40% 55%;
+    --sidebar-background: 210 15% 12%;
+    --sidebar-foreground: 210 15% 95%;
+    --sidebar-primary: 210 50% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 15% 20%;
+    --sidebar-accent-foreground: 210 15% 95%;
+    --sidebar-border: 210 15% 20%;
+    --sidebar-ring: 210 50% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  .wysiwyg-toolbar {
+    @apply rounded-t-md border-0 bg-muted/40 text-foreground;
+  }
+  
+  .wysiwyg-editor {
+    @apply px-4 text-base;
+  }
+
+  .dark .rdw-editor-toolbar {
+      @apply bg-card border-border;
+  }
+  
+  .dark .rdw-option-wrapper,
+  .dark .rdw-dropdown-wrapper {
+      @apply bg-card border-border text-foreground;
+  }
+  .dark .rdw-option-wrapper:hover,
+  .dark .rdw-dropdown-wrapper:hover {
+      @apply bg-secondary;
+  }
+  .dark .public-DraftEditor-content {
+      @apply text-foreground;
+  }
+  .dark .rdw-editor-main {
+      color: hsl(var(--foreground));
+  }
+  .dark .rdw-option-wrapper, .dark .rdw-dropdown-wrapper {
+    background-color: hsl(var(--card));
+    border-color: hsl(var(--border));
+  }
+  .dark .rdw-dropdown-optionwrapper {
+    background-color: hsl(var(--card));
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
+  }
+  .dark .rdw-editor-toolbar {
+    border-color: hsl(var(--border));
+  }
+  
+  .dark .rdw-dropdown-carettoclose,
+  .dark .rdw-dropdown-carettoopen {
+    border-top-color: hsl(var(--foreground));
+    border-bottom-color: hsl(var(--foreground));
+  }
+
+  .dark .rdw-colorpicker-modal,
+  .dark .rdw-link-modal,
+  .dark .rdw-embedded-modal,
+  .dark .rdw-image-modal {
+    @apply bg-card border border-border text-foreground;
+  }
+
+  .dark .rdw-colorpicker-modal-header,
+  .dark .rdw-link-modal-header,
+  .dark .rdw-embedded-modal-header,
+  .dark .rdw-image-modal-header {
+      @apply bg-secondary;
+  }
+
+  .dark .rdw-link-modal-label,
+  .dark .rdw-image-modal-label {
+      @apply text-foreground;
+  }
+
+  .dark .rdw-link-modal-input,
+  .dark .rdw-image-modal-input,
+  .dark .rdw-embedded-modal-input {
+    @apply bg-background border-input text-foreground;
+  }
+
+  .dark .rdw-link-modal-button,
+  .dark .rdw-image-modal-btn,
+  .dark .rdw-embedded-modal-btn {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .dark .rdw-image-modal-btn-section {
+    @apply border-t border-border;
+  }
+}
